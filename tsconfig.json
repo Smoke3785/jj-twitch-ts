@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ESNext",
+    "module": "NodeNext",
+    "esModuleInterop": true,
+    "outDir": "./dist/src",
+    "allowJs": true,
+    "checkJs": false,
+    "rootDir": "./src",
+    "sourceMap": true,
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "typeRoots": ["src/@types", "./node_modules/@types"],
+    "types": ["node"],
+    "paths": {
+      "@main": ["./src/classes/MainInstance"],
+      "@server": ["./src/server/server.ts"],
+      "@functions/*": ["./src/functions/*"],
+      "@cron-jobs/*": ["./src/cron-jobs/*"],
+      "@commands/*": ["./src/commands/*"],
+      "@handlers/*": ["./src/handlers/*"],
+      "@regex": ["./src/functions/regex"],
+      "@log": ["./src/functions/log.js"],
+      "@classes/*": ["./src/classes/*"],
+      "@events/*": ["./src/events/*"],
+      "@config*": ["./src/config"],
+      "@entry": ["./src/index"],
+      "@data": ["./src/data"]
+    }
+  },
+  "include": [
+    "./src/config.js",
+    "./src/**/*.json",
+    "src/index.ts",
+    "./src/**/*",
+    "src/@types"
+  ],
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "files": ["src/@types/index.d.ts"]
+}
